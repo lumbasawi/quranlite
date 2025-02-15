@@ -133,7 +133,11 @@
                                       
                                         <dt class="col-sm-3">Turun di</dt>
                                         <dd class="col-sm-9">{{detail.type}}</dd>
-                                        
+
+                                      <dt class="col-sm-3 text-truncate">Surah {{detail.nama}} Tentang :
+                                          <span v-html="detail.keterangan"></span>
+                                        </dt>
+                                      
                                       </dl></div>
                                     <div class="col-lg-6">
                                         <h3 class="h3 underline">Bacaan Surah {{detail.nama}}</h3>
@@ -149,9 +153,6 @@
                                         </span>
                                     </div>
 
-                                        <dt class="col-sm-3 text-truncate">Surah {{detail.nama}} Tentang :
-                                          <span v-html="detail.keterangan"></span>
-                                        </dt>                                      
                                     </div>
                                 </div>
                             </div>
