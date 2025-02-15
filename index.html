@@ -118,30 +118,33 @@
                                         alt="loading"
                                         />
                                 </div>
-                            <div v-else>
-                            
-                                <div class="row p-1">
+                             <div class="row p-1">
                                     <div class="col-lg-6"><dl class="row">
                                         <dt class="col-sm-3">Nama</dt>
                                         <dd class="col-sm-9">
-                                            {{detail.asma}} / {{detail.nama}}</dd>
+                                            {{detail.asma}}<br>
+                                            {{detail.nama}}</dd>
                                       
                                         <dt class="col-sm-3">Arti</dt>
                                         <dd class="col-sm-9">
                                             {{detail.arti}}
                                         </dd>
                                       
-                                        <dt class="col-sm-3">Turun di</dt>
+                                        <dt class="col-sm-3">Diturunkan di</dt>
                                         <dd class="col-sm-9">{{detail.type}}</dd>
-
-                                      <dt class="col-sm-3 text-truncate">Surah {{detail.nama}} Tentang :
-                                          <span v-html="detail.keterangan"></span>
-                                        </dt>
+                                        
+                                        <dt class="col-sm-3">Audio</dt>
+                                        <dd class="col-sm-9">
+                                            <audio v-bind:src="detail.audio" controls>
+                                          </audio>
+                                        </dd>
                                       
+                                        <dt class="col-sm-3 text-truncate">Keterangan</dt>
+                                        <dd class="col-sm-9 border border-secondary" style="max-height: 250px;overflow-y: scroll;"><span v-html="detail.keterangan"></span></dd>
                                       </dl></div>
                                     <div class="col-lg-6">
                                         <h3 class="h3 underline">Bacaan Surah {{detail.nama}}</h3>
-                                        <div class="border border-success p-3">
+                                        <div class="border border-success p-3"  style="max-height: 450px;overflow-y: scroll;">
                                         <span v-for="(ayat,index) in ayats" ::key="index">
                                             <p>
                                                 <span span class="badge badge-pill badge-success">{{detail.nomor}}:{{ayat.nomor}}</span>
@@ -152,7 +155,6 @@
                                             <hr>
                                         </span>
                                     </div>
-
                                     </div>
                                 </div>
                             </div>
