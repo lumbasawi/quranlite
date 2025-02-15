@@ -3,8 +3,29 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="Description" content="Al-Qur'an Online Dengan Terjemahan Bahasa Indonesia">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Baca Al Quran Online lengkap dengan arab, latin & terjemahan Indonesia. Website cepat, ringan & hemat kuota.">
+    <meta name="keywords" content="AlQuran Online, Al Quran Online kemenag, AlQuran per halaman, Quran per halaman, Al Quran Online Lite">
+    <meta name="author" content="HambaAllah">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="ID">
+    <meta name="geo.placename" content="Indonesia">
+    <meta name="geo.position" content="-5;120">
+    <meta name="ICBM" content="-5, 120">
+    <meta property="og:title" content="Quranlite Online : Al Quran Online Arab, Latin & Terjemahan Bahasa Indonesia">
+    <meta property="og:description" content="Baca Al Quran Online lengkap dengan arab, latin & terjemahan Indonesia. Website cepat, ringan & hemat kuota.">
+    <meta property="og:image" content="https://asset-a.grid.id/crop/0x0:0x0/x/photo/2024/04/15/kitchen-setjpg-20240415123609.jpg">
+    <meta property="og:url" content="https://quranlite.pages.dev/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Quranlite Online : Al Quran Online Arab, Latin & Terjemahan Bahasa Indonesia.">
+    <meta name="twitter:description" content="Baca Al Quran Online lengkap dengan arab, latin & terjemahan Indonesia. Website cepat, ringan & hemat kuota.">
+    <meta name="twitter:image" content="https://asset-a.grid.id/crop/0x0:0x0/x/photo/2024/04/15/kitchen-setjpg-20240415123609.jpg">
+    <link rel="canonical" href="https://quranlite.pages.dev/">
+
+    <!-- Ads Adsense Code -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6131035476027413"
+     crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-6131035476027413">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -26,6 +47,7 @@
               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
                   <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="privasi.html">Home <span class="sr-only">Kebijakan Privasi</span></a>
                 </li>
                 <!-- <li class="nav-item">
                   <a class="nav-link" href="#">Link</a>
@@ -38,7 +60,7 @@
                 <div class="col-lg-12">
                     <div class="card my-5 border-0 shadow ">
                         <div class="card-header bg-success text-light">
-                            Daftar Surah
+                            <h3>Daftar Surah</h3>
                         </div>
                         <div class="card-body">
                     <div v-if="loading" class="d-flex justify-content-center">
@@ -82,7 +104,7 @@
                         <div class="modal-dialog modal-xl ">
                         <div class="modal-content border border-success">
                             <div class="modal-header bg-success text-light">
-                            <h5 class="modal-title" id="detailModalLabel">Surat {{detail.nama}}</h5>
+                            <h2 class="modal-title" id="detailModalLabel">Surat {{detail.nama}}</h2>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -102,8 +124,7 @@
                                     <div class="col-lg-6"><dl class="row">
                                         <dt class="col-sm-3">Nama</dt>
                                         <dd class="col-sm-9">
-                                            {{detail.asma}}<br>
-                                            {{detail.nama}}</dd>
+                                            {{detail.asma}} / {{detail.nama}}</dd>
                                       
                                         <dt class="col-sm-3">Arti</dt>
                                         <dd class="col-sm-9">
@@ -113,18 +134,12 @@
                                         <dt class="col-sm-3">Diturunkan di</dt>
                                         <dd class="col-sm-9">{{detail.type}}</dd>
                                         
-                                        <dt class="col-sm-3">Audio</dt>
-                                        <dd class="col-sm-9">
-                                            <audio v-bind:src="detail.audio" controls>
-                                          </audio>
-                                        </dd>
-                                      
-                                        <dt class="col-sm-3 text-truncate">Keterangan</dt>
-                                        <dd class="col-sm-9 border border-secondary" style="max-height: 250px;overflow-y: scroll;"><span v-html="detail.keterangan"></span></dd>
+                                        <dt class="col-sm-3 text-truncate">Surah {{detail.nama}} Tentang :</dt>
+                                        <dd class="col-sm-9 border border-secondary"><span v-html="detail.keterangan"></span></dd>
                                       </dl></div>
                                     <div class="col-lg-6">
                                         <h3 class="h3 underline">Bacaan Surah {{detail.nama}}</h3>
-                                        <div class="border border-success p-3"  style="max-height: 450px;overflow-y: scroll;">
+                                        <div class="border border-success p-3">
                                         <span v-for="(ayat,index) in ayats" ::key="index">
                                             <p>
                                                 <span span class="badge badge-pill badge-success">{{detail.nomor}}:{{ayat.nomor}}</span>
@@ -135,6 +150,13 @@
                                             <hr>
                                         </span>
                                     </div>
+
+                                      <dt class="col-sm-3">Audio</dt>
+                                        <dd class="col-sm-9">
+                                            <audio v-bind:src="detail.audio" controls>
+                                          </audio>
+                                        </dd>
+                                      
                                     </div>
                                 </div>
                             </div>
