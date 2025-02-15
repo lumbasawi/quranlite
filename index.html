@@ -139,12 +139,12 @@
                                           </audio>
                                         </dd>
                                       
-                                        <dt class="col-sm-3 text-truncate">Keterangan</dt>
-                                        <dd class="col-sm-9 border border-secondary" style="max-height: 250px;overflow-y: scroll;"><span v-html="detail.keterangan"></span></dd>
-                                      </dl></div>
+                                        <dt class="col-sm-3 text-truncate">Keterangan <span v-html="detail.keterangan"></span></dt>
+                                      </dl>
+                                    </div>
                                     <div class="col-lg-6">
-                                        <h3 class="h3 underline">Bacaan Surah {{detail.nama}}</h3>
-                                        <div class="border border-success p-3"  style="max-height: 450px;overflow-y: scroll;">
+                                        <h2 class="h3 underline">Bacaan Surah {{detail.nama}}</h2>
+                                        <div class="p-3">
                                         <span v-for="(ayat,index) in ayats" ::key="index">
                                             <p>
                                                 <span span class="badge badge-pill badge-success">{{detail.nomor}}:{{ayat.nomor}}</span>
