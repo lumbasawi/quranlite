@@ -132,12 +132,11 @@
                                         <dt class="col-sm-3">Turun di</dt>
                                         <dd class="col-sm-9">{{detail.type}}</dd>
                                       
-                                        <dt class="col-sm-3 text-truncate">Keterangan</dt>
-                                          <dd class="col-sm-9 border border-secondary"><span v-html="detail.keterangan"></span></dd>
+
                                       </dl>
                                     </div>
                                     <div class="col-lg-6">
-                                        <h2 class="h3 underline">Bacaan Surah {{detail.nama}}</h2>
+                                        <h3 class="h3 underline">Bacaan Surah {{detail.nama}}</h3>
                                         <div class="p-3">
                                         <span v-for="(ayat,index) in ayats" ::key="index">
                                             <p>
@@ -148,6 +147,10 @@
                                             <small class="text-left font-italic">{{ayat.id}}</small>
                                             <hr>
                                         </span>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <h3>Makna Surat {{detail.nama}}</h3>
+                                        <p><span v-html="detail.keterangan"></span></p>
                                     </div>
                                     </div>
                                 </div>
