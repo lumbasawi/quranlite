@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -47,7 +46,7 @@
       
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-            <a class="navbar-brand" href="#">Al-Qur'an Online Kemenag Resmi</a>
+            <a class="navbar-brand" href="#">Al-Qur'an Online</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -60,6 +59,9 @@
                 <li>
                   <a class="nav-link" href="privasi.html">Kebijakan Privasi</a>
                 </li>
+                <li>
+                  <a class="nav-link" href="about-me">Tentang</a>
+                </li>
                 <!-- <li class="nav-item">
                   <a class="nav-link" href="#">Link</a>
                 </li> -->
@@ -67,51 +69,13 @@
           </nav>
         <div class="container">
             
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="card my-5 border-0 shadow ">
-                        <div class="card-header bg-success text-light">
-                            <h3>Daftar Surah Al Quran Online Arab, Latin & Terjemahan.</h3>
-                        </div>
-                        <div class="card-body">
-                    <div v-if="loading" class="d-flex justify-content-center">
-                        <img 
-                            src="loading.svg" 
-                            height="87"
-                            width="100"
-                            alt="loading"
-                             />
-                    </div>
-                <div v-else class="table-responsive">
-                    
-                    <table class="display table" style="width:100%" id="list">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Nama Surah</th>
-                                
-                                <th>Arti Surah</th>
-                                <th>Jumlah Ayat</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr v-for="(data, index) in table" :key="index">
-                                <td>{{index+1}}</td>
-                                <td><a href="#" class="text-success" data-toggle="modal" data-target="#detailModal" v-on:click="getDetail(index)">{{data.asma}}<br>
-                                    {{data.nama}}
-                                </a>
-                            </td>
-                            <td >{{data.arti}}</td>
-                            <td >{{data.ayat}}</td>
-                        </tr>
-                    </tbody>
-                </table> 
-                    
-                </div>
-                </div>
-            </div>
-                  <!-- article -->
-                  <p>Halo! Kitalah Alqura'an Online! Dan melalui laman ini kami ingin sedikit bercerita mengenai siapa kami dan apa tujuan kami kenapa hadir di jagat dunia maya saat ini. Cerita singkat saja kita weblynk.com merupakan sebuah media berbagi yang fokus bercerita mengenai segala akan pengetahuan umum yang kita ketahui. Hadir sejak Juli 2020, kami mengemban misi untuk menjadi media referensi seputar dunia pengetahuan umum dan akan jadi nomor 1 di Indonesia. Asal Usul Nama weblynk Nama “weblynk” adalah nama owner kami Sodikul atau weblynk, kami berharap semoga anda sebagai yang membaca informasi dari website kami menjadi lebih cerdas & bijak dengan ilmu. Kritik & Saran Kami menyadari bahwa untuk bisa mencapai misi kami menjadi media referensi pengetahuan umum & akan menjadi yang terbaik di Indonesia, kami membutuhkan kritik dan saran dari Anda para pembaca setia weblynk. Oleh karenanya, kami sangat terbuka terhadap semua kritik dan saran yang dapat membangun weblynk menjadi lebih baik lagi. Jika Anda memiliki kritik dan saran untuk pengembangan weblynk.com, jangan ragu untuk mengirim pesan kepada kami melalui laman hubungi kami.</p></div>
+          <!-- article -->
+            <p>Halo! Kitalah Alqura'an Online! Dan melalui laman ini kami ingin sedikit bercerita mengenai siapa kami dan apa tujuan kami kenapa hadir di jagat dunia maya saat ini.</p>
+            <p>Cerita singkat saja kita Alqura'an Online merupakan sebuah media berbagi yang fokus bercerita mengenai segala akan pengetahuan umum yang kita ketahui.</p>
+            <p>Hadir sejak Juli 2020, kami mengemban misi untuk menjadi media referensi seputar dunia pengetahuan umum dan akan jadi nomor 1 di Indonesia.
+            <p>Asal Usul Nama weblynk Nama “weblynk” adalah nama owner kami Sodikul atau weblynk, kami berharap semoga anda sebagai yang membaca informasi dari website kami menjadi lebih cerdas & bijak dengan ilmu.</p>
+            <p>Kritik & Saran Kami menyadari bahwa untuk bisa mencapai misi kami menjadi media referensi pengetahuan umum & akan menjadi yang terbaik di Indonesia, kami membutuhkan kritik dan saran dari Anda para pembaca setia Alqura'an Online. 
+            <p>Oleh karenanya, kami sangat terbuka terhadap semua kritik dan saran yang dapat membangun weblynk menjadi lebih baik lagi. Jika Anda memiliki kritik dan saran untuk pengembangan weblynk.com, jangan ragu untuk mengirim pesan kepada kami melalui laman hubungi kami.</p></div>
                   
                     </div>
                 </div>
