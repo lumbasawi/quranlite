@@ -1,0 +1,183 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Baca Al Quran Online lengkap dengan arab, latin & terjemahan Indonesia. Website cepat, ringan & hemat kuota.">
+    <meta name="keywords" content="AlQuran Online, Al Quran Online kemenag, AlQuran per halaman, Quran per halaman, Al Quran Online Lite">
+    <meta name="author" content="HambaAllah">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="ID">
+    <meta name="geo.placename" content="Indonesia">
+    <meta name="geo.position" content="-5;120">
+    <meta name="ICBM" content="-5, 120">
+    <meta property="og:title" content="Quranlite Online : Al Quran Online Arab, Latin & Terjemahan Bahasa Indonesia">
+    <meta property="og:description" content="Baca Al Quran Online lengkap dengan arab, latin & terjemahan Indonesia. Website cepat, ringan & hemat kuota.">
+    <meta property="og:image" content="https://asset-a.grid.id/crop/0x0:0x0/x/photo/2024/04/15/kitchen-setjpg-20240415123609.jpg">
+    <meta property="og:url" content="https://quranlite.pages.dev/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Quranlite Online : Al Quran Online Arab, Latin & Terjemahan Bahasa Indonesia.">
+    <meta name="twitter:description" content="Baca Al Quran Online lengkap dengan arab, latin & terjemahan Indonesia. Website cepat, ringan & hemat kuota.">
+    <meta name="twitter:image" content="https://asset-a.grid.id/crop/0x0:0x0/x/photo/2024/04/15/kitchen-setjpg-20240415123609.jpg">
+    <link rel="canonical" href="https://quranlite.pages.dev/">
+
+    <!-- Ads Adsense Code -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6131035476027413"
+     crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-6131035476027413">
+    <meta name="google-site-verification" content="3Mogfdtgl-xOEAXYGwWYyOGHMsNjyQpTBk3xRgREfcA" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://litequran.net/assets/style225.css">
+    <link rel="stylesheet" href="https://github.com/lumbasawi/quranlite/blob/main/LPMQ%20IsepMisbah.ttf">
+
+    <style>
+      .text-right{
+        font-family: lPMQ;
+        font-size: 28px;
+    </style>
+
+    <title>Al-Qur'an Online : Qur'an Kemenag Arab, Latin & Terjemahan Bahasa Indonesia.</title>
+  </head>
+  <body>
+      
+    <div id="app">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+            <a class="navbar-brand" href="#">Al-Qur'an Online Kemenag Resmi</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li>
+                  <a class="nav-link" href="privasi.html">Kebijakan Privasi</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li> -->
+            </div>
+          </nav>
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card my-5 border-0 shadow ">
+                        <div class="card-header bg-success text-light">
+                            <h3>Daftar Surah Al Quran Online Arab, Latin & Terjemahan.</h3>
+                        </div>
+                        <div class="card-body">
+                    <div v-if="loading" class="d-flex justify-content-center">
+                        <img 
+                            src="loading.svg" 
+                            height="87"
+                            width="100"
+                            alt="loading"
+                             />
+                    </div>
+                <div v-else class="table-responsive">
+                    
+                    <table class="display table" style="width:100%" id="list">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama Surah</th>
+                                
+                                <th>Arti Surah</th>
+                                <th>Jumlah Ayat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(data, index) in table" :key="index">
+                                <td>{{index+1}}</td>
+                                <td><a href="#" class="text-success" data-toggle="modal" data-target="#detailModal" v-on:click="getDetail(index)">{{data.asma}}<br>
+                                    {{data.nama}}
+                                </a>
+                            </td>
+                            <td >{{data.arti}}</td>
+                            <td >{{data.ayat}}</td>
+                        </tr>
+                    </tbody>
+                </table> 
+                    
+                </div>
+                </div>
+            </div>
+                  <!-- article -->
+                  <p>Halo! Kitalah Alqura'an Online! Dan melalui laman ini kami ingin sedikit bercerita mengenai siapa kami dan apa tujuan kami kenapa hadir di jagat dunia maya saat ini. Cerita singkat saja kita weblynk.com merupakan sebuah media berbagi yang fokus bercerita mengenai segala akan pengetahuan umum yang kita ketahui. Hadir sejak Juli 2020, kami mengemban misi untuk menjadi media referensi seputar dunia pengetahuan umum dan akan jadi nomor 1 di Indonesia. Asal Usul Nama weblynk Nama “weblynk” adalah nama owner kami Sodikul atau weblynk, kami berharap semoga anda sebagai yang membaca informasi dari website kami menjadi lebih cerdas & bijak dengan ilmu. Kritik & Saran Kami menyadari bahwa untuk bisa mencapai misi kami menjadi media referensi pengetahuan umum & akan menjadi yang terbaik di Indonesia, kami membutuhkan kritik dan saran dari Anda para pembaca setia weblynk. Oleh karenanya, kami sangat terbuka terhadap semua kritik dan saran yang dapat membangun weblynk menjadi lebih baik lagi. Jika Anda memiliki kritik dan saran untuk pengembangan weblynk.com, jangan ragu untuk mengirim pesan kepada kami melalui laman hubungi kami.</p></div>
+                  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="modified.jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+  <script>
+     
+     var app = new Vue({
+          el:'#app',
+          data:{
+              table:[],
+              detail:[],
+              ayats:[],
+              loading:false,
+              loading2:false
+          },
+          methods: {
+              getDetail(index){
+                  this.loading2 = true
+                this.$http.get('https://api.npoint.io/99c279bb173a6e28359c/data/'+index+'/').then(response=>{
+                    // console.log(response.body.nomor);
+                    this.getSurah(response.body.nomor);
+                    this.detail = response.body;
+               },response=>{
+                   console.log('getDetail error '+response)
+               })
+                  
+              },
+              getSurah(nomor){
+                this.$http.get('https://api.npoint.io/99c279bb173a6e28359c/surat/'+nomor+'/').then(response=>{
+                    console.log(response.body);
+                    this.ayats = response.body;
+                    this.loading2 = false
+               },response=>{
+                   console.log('getAyat error '+response)
+               })
+              }
+          },
+           mounted() {
+            this.loading = true
+               this.$http.get('https://api.npoint.io/99c279bb173a6e28359c/data/').then(response=>{
+                //    console.log(response.body[0]);
+                   this.table = response.body;
+                   this.loading = false
+                   this.$nextTick(function() {
+                    $('#list').DataTable({
+                        responsive: true
+                    });
+                    })
+                
+               },response=>{
+                   console.log('error '+response)
+               })
+           },
+      })
+  </script>
+ 
+</body>
+</html>
